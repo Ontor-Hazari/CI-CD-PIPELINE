@@ -4,7 +4,7 @@
 /** @type {import('@playwright/test').PlaywrightTestConfig} */
 const config = {
   use: {
-    headless: false,
+    headless: process.env.CI ? true : false,
   },
 };
 
